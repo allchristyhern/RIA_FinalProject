@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html ng-app="pokemonApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokemon App</title>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/scripts.js"></script>
+    <script src="./app/controllers//rootController.js"></script>
+    <script src="./app/controllers//listController.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--Css Files-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body ng-controller="RootController">
+
+
+    <header id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="/#/">
+
+                    </a>
+                </div>
+                <nav id="main-menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                      
+                        <a class="navbar-brand" href="#!index">
+                            <i class="fa fa-home"></i>
+                            {{appTitle}}
+                        </a>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right"></ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--Main Image Container-->
+    <div class="img">
+        <img src="Content/images/MainLogo.PNG" />
+    </div>
+
+    <div class="view-container">
+        <div id="page-main" ng-view=""></div>
+    </div>
+
+
+</body>
+</html>

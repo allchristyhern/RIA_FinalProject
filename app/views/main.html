@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="root">
+
+        <div class="container">
+
+            <div class="card" ng-repeat="pokemon in pokemonsList" >
+
+                <div class="h1"> {{pokemon.name}}</div>
+                <div class="p">'Pokemon ID:' {{pokemon.id}}</div>
+                <div class="p">'Form: ' {{pokemon.form}}</div>
+                <div class="p">'Base Stamina: '{{pokemon.base_stamina}}</div>
+                <div class="p">'Base Defense: ' {{pokemon.base_defense}}</div>
+                <div class="p">'Base Attack: ' {{pokemon.base_attack}}</div>
+            </div>
+
+
+
+              <div class="load-more-wrapper">
+                  <button ng-click="getPokemonsList()" ng-hide="pokemonsList.length == 0" class="load-more">
+                <i class="fa fa-film"></i>
+                Load More
+                  </button>
+              </div>
+        </div>
+    </div>
+
+</body>
+</html>
